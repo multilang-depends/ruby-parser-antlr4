@@ -3,6 +3,7 @@
 MIT License
 
 Copyright (c) 2019 Gang ZHANG (gangz@emergentdesign.cn)
+(Contributors are welcome!)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -22,6 +23,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
+History: 2019/01/06 Initial version
 */
 
 parser grammar RubyParser;
@@ -120,7 +122,7 @@ function_definition_params
 function_definition_param: 
 	identifier 
 	| MUL identifier
-	| MUL MUL identifier
+	| EXP identifier
 	| BIT_AND identifier
 	| hash_asso
 	| identifier ASSIGN expr
@@ -173,17 +175,17 @@ expr_statement_suffix:
 ;
 
 primary:
-	variable_path                                               #PrimaryVarPath
-	| Regex														#PrimaryRegex
-	| symbol                                                    #PrimarySymbol
-	| LEFT_RBRACKET expr RIGHT_RBRACKET                         #PrimaryBracket
-	| block                                                     #PrimaryBlock
-	| BREAK expr?												#PrimaryStatementBreak
-	| RETURN expr?                                              #PrimaryStatementReturn
-	| RAISE expr                                                #PrimaryStatementRaise
-	| RESCUE rescure_param?                                     #PrimaryStatementRescue
-	| YIELD expr?												#PrimaryStatementYield
-	| BEGIN terms statement_list_terms? END						#PrimaryBeginBlock
+	variable_path                                                              #PrimaryVarPath
+	| Regex														               #PrimaryRegex
+	| symbol                                                                   #PrimarySymbol
+	| LEFT_RBRACKET expr RIGHT_RBRACKET                                        #PrimaryBracket
+	| block                                                                    #PrimaryBlock
+	| BREAK expr?												               #PrimaryStatementBreak
+	| RETURN expr?                                                             #PrimaryStatementReturn
+	| RAISE expr                                                               #PrimaryStatementRaise
+	| RESCUE rescure_param?                                                    #PrimaryStatementRescue
+	| YIELD expr?												               #PrimaryStatementYield
+	| BEGIN terms statement_list_terms? END						               #PrimaryBeginBlock
 	| IF crlfs? expr then_keyword statement_list_terms? if_tail* END           #PrimaryBlockIf
 	| WHEN expr then_keyword statement_list_noterms END                        #PrimaryBlockWhen
 	| UNLESS crlfs? expr then_keyword  statement_list_terms? unless_tail? END  #PrimaryBlockUnless

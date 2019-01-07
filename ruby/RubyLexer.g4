@@ -3,6 +3,7 @@
 MIT License
 
 Copyright (c) 2019 Gang ZHANG (gangz@emergentdesign.cn)
+(Contributors are welcome!)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -22,6 +23,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
+* History: 2019/01/06 Initial version
 */
 
 lexer grammar RubyLexer;
@@ -180,7 +182,7 @@ REQUIRE:       'require';
 
 Integer
 	:
-	Sign? Digits ExponentPart? NumberTypeSuffix?
+	(PLUS|MINUS)? Digits ExponentPart? NumberTypeSuffix?
 	| HEX_LITERAL ExponentPart? NumberTypeSuffix?
 	| OCT_LITERAL ExponentPart? NumberTypeSuffix?
 	| DEC_LITERAL ExponentPart? NumberTypeSuffix?
@@ -192,7 +194,7 @@ Integer
 
 Float
 :
-	Sign? [0-9]* '.' [0-9]+ ExponentPart? NumberTypeSuffix?
+	(PLUS|MINUS)? [0-9]* '.' [0-9]+ ExponentPart? NumberTypeSuffix?
 ;
 
 
