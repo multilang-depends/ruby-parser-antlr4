@@ -1,9 +1,7 @@
-  class SummaryReporter < StatisticsReporter
-    attr_accessor :sync
-    attr_accessor :old_sync
+class A < B
+    attr_accessor :x
+    attr_accessor :y
 
-    def statistics # :nodoc:
-      "Finished in %.6fs, %.4f runs/s, %.4f assertions/s." %
-        [total_time, count / total_time, assertions / total_time]
+    def statistics
     end
 end

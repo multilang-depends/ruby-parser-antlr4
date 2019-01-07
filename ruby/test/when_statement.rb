@@ -1,13 +1,13 @@
 $age =  5
 case $age
 when 0 .. 2
-    puts "婴儿"
+    puts "x"
 when 3 .. 6
-    puts "小孩"
+    puts "y"
 when 7 .. 12
-    puts "child"
+    puts "z"
 when 13 .. 18
-    puts "少年"
+    puts "f"
 else
-    puts "其他年龄段的"
+    puts "other"
 end

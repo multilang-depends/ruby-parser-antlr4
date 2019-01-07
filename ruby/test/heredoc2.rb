@@ -1,4 +1,4 @@
-      schema = Avro::Schema.parse(<<-JSON)
+      s = parse(<<-JSON)
         { "type": "#{type}" }
       JSON
 

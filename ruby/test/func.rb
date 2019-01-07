@@ -4,13 +4,13 @@
     def to_s; writer.string; end
  
 def test(a1="Ruby", a2="Perl")
-   puts "编程语言为 #{a1}"
-   puts "编程语言为 #{a2}"
+   puts "programming lanaguage is #{a1}"
+   puts "programming lanaguage is #{a2}"
 end
 
 def test1(a1, a2)
-   puts "编程语言为 #{a1}"
-   puts "编程语言为 #{a2}"
+   puts "programming lanaguage is #{a1}"
+   puts "programming lanaguage is #{a2}"
 end
 test "C", "C++"
 def test
@@ -23,9 +23,9 @@ var = test
 puts var
 
 def sample (*test)
-   puts "参数个数为 #{test.length}"
+   puts "arg numer= #{test.length}"
    for i in 0...test.length
-      puts "参数值为 #{test[i]}"
+      puts "arg= #{test[i]}"
    end
 end
 sample "Zara", "6", "F"

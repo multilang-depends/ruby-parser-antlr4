@@ -4,12 +4,12 @@ print <<-EOF
     here document ie. multiple line string.
 EOF
 
-print <<-"EOF";                # 与上面相同
+print <<-"EOF";                # save with above
     This is the second way of creating
     here document ie. multiple line string.
 EOF
 
-print <<`EOC`                 # 执行命令
+print <<`EOC`                 # exec command
 	echo hi there
 	echo lo there
 EOC

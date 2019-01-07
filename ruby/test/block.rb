@@ -1,13 +1,9 @@
-      if messages
-        hsh['messages'] = messages.inject ({}){ |h, (k,t)| h[k] = t.to_avro(names);h }
-      end
+h['m'] = m.inject ({}){ |h, (k,t)| h[k] = t.f(names);h }
 
-
- def validate_possible_types(datum, expected_schema, path)
-        expected_schema.schemas.map do |schema|
-          result = Result.new
-          validate_recursive(schema, datum, path, result)
+def t(a, b, c)
+        x.y.z.map do |s|
+          r = R.new
           { type, t}
         end
-      end
+end
 

@@ -3,10 +3,10 @@
 puts "Hello World!"; 
 
 BEGIN {
-   puts "初始化 Ruby 程序"
+   puts "start Ruby program"
 }
 
 END {
-   puts "停止 Ruby 程序"
+   puts "end Ruby program"
 }
 

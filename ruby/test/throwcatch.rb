@@ -9,7 +9,5 @@ catch :quitRequested do
    name = promptAndGet("Name: ")
    age = promptAndGet("Age: ")
    sex = promptAndGet("Sex: ")
-   # ..
-   # 处理信息
 end
 promptAndGet("Name:")
