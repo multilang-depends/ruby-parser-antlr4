@@ -292,7 +292,7 @@ literal:
 ;
 
 	
-identifier: Identifier | globalVar | classVar |instanceVar | idArg | NEXT  |REDO |RETRY | BREAK |SELF | SUPER  |NIL |REQUIRE | empty;
+identifier: Identifier | globalVar | classVar |instanceVar | idArg | NEXT  |REDO |RETRY | BREAK |SELF | SUPER  |NIL | empty;
 
 empty: 
 	LEFT_PAREN RIGHT_PAREN																/* empty block  */

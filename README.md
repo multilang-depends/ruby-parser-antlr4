@@ -4,7 +4,7 @@ The ANTLR v4 grammar for Ruby.
 
 
 ## Notes/Improve points
-- Ruby is a very flexiable lanaguage. The parser should consider many possibile special usages. It impacts the performance of the parser, but I belive there still should be some solution to provide it.
+- Ruby is a very flexiable lanaguage. The parser should consider many possibile special usages. It impacts the performance of the parser, but I belive there still should be some solution to solve it.
 - Currently version is already cover most of ruby grammar, took a reference with  ```2.6.0-rc2```.
 - Still several points should be mentioned:
   * Regex is not support well: an *expression* could be ```a / b + c / d```, which include two ```/``` marks. While the regex in ruby is also a style like ```/ ... .../```. I still have not found solution for that. For the time being, I just simple identify tokens without blank between ```/ ... .../``` as regex, and identify others as normal tokens.

@@ -176,10 +176,7 @@ WHEN:			'when';
 WHILE:			'while';
 YIELD:			'yield';
 
-//non-keyword but important
-REQUIRE:       'require';
 // Literals
-
 Integer
 	:
 	(PLUS|MINUS)? Digits ExponentPart? NumberTypeSuffix?
