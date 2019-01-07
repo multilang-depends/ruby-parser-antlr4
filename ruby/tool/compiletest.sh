@@ -8,4 +8,4 @@ antlr4 RubyParser.g4
 
 javac -cp $CLASSPATH *.java
 
-exec java -cp $CLASSPATH org.antlr.v4.gui.TestRig Ruby prog $1
+exec java -cp $CLASSPATH org.antlr.v4.gui.TestRig Ruby compilation_unit $1

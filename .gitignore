@@ -1,3 +1,7 @@
+*.tokens
+*.swp
+~*
+ruby/*.java
 # Compiled class file
 *.class
 

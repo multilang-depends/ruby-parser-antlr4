@@ -1,4 +1,4 @@
-for FILE in `ls *.rb`
+for FILE in `ls ./test/*.rb`
 do
-echo $FILE; ./test.sh $FILE
+echo $FILE; ./tool/test.sh $FILE
 done
