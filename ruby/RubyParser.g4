@@ -129,10 +129,8 @@ function_definition_param:
 ;
 
 function_call_param:
-	identifier
+	expr 
 	| hash_asso
-	| expr 
-	| identifier ASSIGN expr
 ;
 
 
