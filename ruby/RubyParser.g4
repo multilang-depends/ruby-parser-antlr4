@@ -224,7 +224,7 @@ unless_tail:
 	;
 	
 if_tail: 
-	ELSIF crlfs? expr terms statement_list_terms
+	ELSIF crlfs? expr then_keyword statement_list_terms
 	| else_tail
 ;
 else_tail: 

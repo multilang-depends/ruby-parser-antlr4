@@ -206,9 +206,7 @@ String
 ;
 
 
-DollarSpecial:
-    '$' [!?$@;/\\_~&'>*] |
-    '$' '.' | '\'';
+DollarSpecial: '$' PrintableCharacter;
 
 // Separators
 CRLF:           '\r'? '\n';
@@ -419,7 +417,10 @@ EscapedSequenceChar:
 
 fragment
 PrintableCharacter: [0-9A-Za-z]
-                    |[!"#$%&'()*+,-./:;<=>?@[\]^_`~];
+                    |SpecialPrintableCharacter;
+
+fragment
+SpecialPrintableCharacter: [!"#$%&'()*+,-./:;<=>?@[\]^_`~?\\];
 
 	
 mode HERE_DOC_MODE;
