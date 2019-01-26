@@ -197,7 +197,7 @@ Float
 
 
 Regex:
-    '/'  ~( '\n' | '\r' | '/' |' ')+ '/' 'i'?
+    '/'  ~( '\n' | '\r' | '/' |' ')+ '/' 'i'? 'o'?
 ;
 String
 :
@@ -206,7 +206,7 @@ String
 ;
 
 
-DollarSpecial: '$' PrintableCharacter;
+DollarSpecial: '$' SpecialPrintableCharacter;
 
 // Separators
 CRLF:           '\r'? '\n';

@@ -181,12 +181,12 @@ primary:
 	| BREAK expr?												               #PrimaryStatementBreak
 	| RETURN expr?                                                             #PrimaryStatementReturn
 	| RAISE expr                                                               #PrimaryStatementRaise
-	| RESCUE rescure_param?                                                    #PrimaryStatementRescue
+	| RESCUE rescure_param?  else_tail?                                        #PrimaryStatementRescue
 	| YIELD expr?												               #PrimaryStatementYield
 	| BEGIN terms statement_list_terms? END						               #PrimaryBeginBlock
 	| IF crlfs? expr then_keyword statement_list_terms? if_tail* END           #PrimaryBlockIf
 	| WHEN expr then_keyword statement_list_noterms END                        #PrimaryBlockWhen
-	| UNLESS crlfs? expr then_keyword  statement_list_terms? unless_tail? END  #PrimaryBlockUnless
+	| UNLESS crlfs? expr then_keyword  statement_list_terms? else_tail? END  #PrimaryBlockUnless
 	| CASE statement_list_terms? case_body*  END                               #PrimaryBlockCase1
 	| CASE terms case_body*  END                                               #PrimaryBlockCase2
 	| WHILE crlfs? expr do_keyword  statement_list_terms? END                  #PrimaryBlockWhile 
@@ -218,9 +218,6 @@ case_body:
 	
 when_cond: 
 	expr 
-	;
-unless_tail: 
-	else_tail
 	;
 	
 if_tail: 
