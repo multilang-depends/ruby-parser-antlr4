@@ -122,7 +122,7 @@ HereDoc2: '<<' '-'?  StringFragment
 		} 
 		;
 
-HereDoc3:	ShellCommandFrag 
+HereDoc3:	'<<' '-'? ShellCommandFrag 
 		{
 			startHereDoc();
 		} 

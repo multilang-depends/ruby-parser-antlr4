@@ -184,6 +184,7 @@ primary:
 	| RESCUE rescure_param?  else_tail?                                        #PrimaryStatementRescue
 	| YIELD expr?												               #PrimaryStatementYield
 	| BEGIN terms statement_list_terms? END						               #PrimaryBeginBlock
+    | IF expr then_keyword statement (ELSIF expr then_keyword statement)? (ELSE expr)? END  #PrimaryBlockIf2
 	| IF crlfs? expr then_keyword statement_list_terms? if_tail* END           #PrimaryBlockIf
 	| WHEN expr then_keyword statement_list_noterms END                        #PrimaryBlockWhen
 	| UNLESS crlfs? expr then_keyword  statement_list_terms? else_tail? END  #PrimaryBlockUnless
@@ -284,6 +285,7 @@ literal:
 	|(TRUE| FALSE)
 	| NIL 
 	| Float DOT
+	| ShellCommand
 ;
 
 	
